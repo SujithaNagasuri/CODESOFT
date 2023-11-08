@@ -1,0 +1,34 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+$bg-primary: #03060f;
+$font-color: #bcbfc6;
+.home-img{
+    width: 100%;
+    height: 100vh;
+    background: url(https://wallpapercave.com/wp/wp1936517.jpg);
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+   
+}
+section{
+    background: $bg-primary;
+    color: $font-color;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+https://www.history.com/topics/inventions/nikola-tesla
+https://mdbootstrap.com/docs/standard/extended/timeline/
+.tesla-img{
+    text-align: center;
+}
+.row p{
+    line-height: 2rem;
+}
