@@ -1,0 +1,805 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: 0;
+    outline: 0;
+    font-family: 'Nunito', sans-serif;
+    transition: all .5s linear;
+}
+$secondary-bg: #f2f3f7;
+$fg-color: #2c98f0;
+// $fg-color: rgba(191, 16, 48, 0.748);
+$gray: gray;
+html
+{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+.btn{
+    background: $fg-color;
+    color: white;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 10px 1rem rgba(0,0,0,0.5);
+    width: 20%;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+
+.banner{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 3rem;
+    padding: 5rem;
+    background: $secondary-bg;
+    text-align: center;
+
+    .ban{
+        h2{
+            font-size: 3rem;
+            font-weight: 333;
+            
+            
+        }
+        p{
+            font-size: 2rem;
+            color: $gray;
+            letter-spacing: .2rem;
+            
+        }
+    }
+}
+
+.achievement{
+    background: $secondary-bg;
+    margin-top: 3rem;
+    padding: 5rem;
+    box-shadow: 10px 10px 1rem rgba(0,0,0,0.3);
+    h1{
+        font-size: 3rem;
+        font-weight: 333;
+        margin-bottom: 4rem;
+    }
+    a{
+        
+        border: 1px solid $fg-color;
+        padding: .5rem 1rem;
+        font-size: 1rem;
+        color: $fg-color;
+        font-size:small;
+        letter-spacing: .5rem;
+        &:hover{
+            background: $fg-color;
+            color: white;
+        }
+    }
+
+}
+.heading{
+    h3{
+        font-size: 1rem;
+        letter-spacing: 1rem;
+        color: $gray;
+        margin-bottom: 1.5rem;
+    }
+    h1{
+        font-size: 3rem;
+        color: $fg-color;
+        line-height: 5rem;
+    }
+    
+
+}
+
+
+.main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    .a{
+        background: $secondary-bg;
+        flex: 20%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        height: 100vh;
+        padding: 1rem;
+        
+        img{
+
+            width: 60%;
+            height: 20%;
+            border-radius: 50%;
+        }
+        h1{
+            font-size: 2rem;
+            margin-top: 2rem;
+         }
+         p{
+             span{
+                    color:$fg-color;
+             }
+                    
+           font-size: 1.5rem;
+            margin-top: 1rem;
+         }
+         nav{
+           display: flex;
+            flex-direction: column;
+            margin-top: 2rem;
+            text-align: center;
+           
+            a{
+                font-size: 1.3rem;
+                color: black;
+                margin-bottom: 2rem;
+                position: relative;
+                &:hover::after{
+                    width: 50%;
+                }
+
+                &:hover::before{
+                    width: 50%;
+                }
+             }
+             a::before{
+                content: '';
+                width: 0;
+                height: 1px;
+                background: $fg-color;
+                position: absolute;
+                right: 50%;
+                bottom: -3px;
+                transition: .5s;
+             }
+             a::after{
+                content: '';
+                width: 0;
+                height: 1px;
+                background: $fg-color;
+                position: absolute;
+                left: 50%;
+                bottom: -3px;
+                transition: .5s;
+             }
+            .active{
+                 color: $fg-color;
+                   text-decoration: underline;
+                }
+            }
+    }
+    .b{
+        
+        position: absolute;
+        left: 20%;
+        flex: 80%;
+        width: 80%;
+        
+        padding: 5% 5%;
+       
+        .about{
+           
+            margin-bottom: 5rem;
+           padding: 2rem 0;
+            p{
+                margin: 2rem 0 5rem 0;
+                font-size: 1.5rem;
+                line-height: 3rem;
+                color: $gray;
+                span{
+                    color: $fg-color;
+                }
+            }
+            .about-row{
+                display: grid;
+                grid-template-columns: repeat(4,1fr);
+                gap: 2.5rem;
+                align-items: center;
+               
+
+                .about-box{
+                    box-shadow: 10px 0 1rem rgba(0,0,0,0.3);
+                    padding: 2rem;
+
+
+                    
+                    i{
+                        font-size: 2.5rem;
+                        margin-bottom: 2rem;
+                    }
+                    h2{
+                        font-size: 2rem;
+                        font-weight: 222;
+                        margin-bottom: 2rem;
+                    }
+
+                    &:nth-child(1){
+                        border-bottom: 3px solid #2c98f0;
+                        i{
+                            color: #2c98f0;
+                        };
+                    }
+                    &:nth-child(2){
+                        border-bottom: 2px solid #ec5453;
+                        i{
+                            color: #ec5453;
+                                
+                        }
+                    }
+                    &:nth-child(3){
+                        border-bottom: 2px solid #f9bf3f;
+                        i{
+                            color: #f9bf3f;
+                        }
+                    }
+                    &:nth-child(4){
+                        border-bottom: 2px solid #a84cb8;
+                        i{
+                            color: #a84cb8;
+                        }
+                    }
+                    &:hover{
+                        background: $fg-color;
+                        color: white;
+
+                        i{
+                            color: white;
+                        }
+                        border-bottom: none;
+                        box-shadow: none;
+                    }
+                }
+            }
+           
+        }
+        .services{
+            
+            padding: 2rem 0;
+            .services-row{
+                margin-top: 5rem;
+                display: grid;
+                grid-template-columns: repeat(3,1fr);
+                gap: 2.5rem;
+                align-items: center;
+                row-gap: 8rem;
+
+
+                .services-box{
+                    box-shadow: 10px 0 1rem rgba(0,0,0,0.3);
+                    padding: 2rem 5rem;
+                    text-align: center;
+                    position: relative;
+                    border-bottom: 3px solid $fg-color;
+
+                    .square{
+                        position: relative;
+                        width: 10rem;
+                        height: 10rem;
+                        .shape{
+                            position: absolute;
+                            top: -60%;
+                            left: 80%;
+                            width: 100%;
+                            height: 100%;
+                            background: $fg-color;
+                            clip-path: polygon(0 25%,50% 0,100% 25%,100% 75%,50% 100%,0 75%);
+                        }
+                    }
+
+                    i{
+                        font-size: 3rem;
+                        color: white;
+                        position: absolute;
+                        top: 30%;
+                        left: 40%;
+                    }
+
+                    h1{
+                        font-size: 2rem;
+                    }
+                    p{
+                        
+                        font-size: 1.5rem;
+                        line-height: 2.5rem;
+                        margin: 2rem;
+                        color: $gray;
+                    }
+                }
+            }
+        }
+
+        .skills{
+            padding: 2rem 0;
+            margin-top: 10rem;
+
+            p{
+                
+                margin: 2rem 0;
+                font-size: 1.5rem;
+               
+                color: $gray;
+                line-height: 3rem;
+            }
+            .skill-row{
+                margin-top: 5rem;
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+                gap: 2.5rem;
+                align-items: center;
+                row-gap: 8rem;
+
+                .skill{
+                    .skil-percent{
+                        margin-top: 2rem;
+                        width: 100%;
+                        height: .4rem;
+                        border-radius: 1rem;
+                        background: $secondary-bg;
+                       
+                     }
+                     #skill-1{
+                        width: 90%;
+                        height: 100%;
+                        background: $fg-color;
+                        border-radius: 2rem;
+                        // line-height: 2rem;
+
+                        animation:  stretch 5s linear;
+                        @keyframes stretch{
+                            0%{
+                                width: 10%;
+                            }
+                            50%{
+                                width: 50%;
+                            }
+                            100%{
+                                width: 90%;
+                            }
+                            
+                        }
+                     }
+                     #skill-2{
+                        width: 60%;
+                        height: 100%;
+                        background: #2c98f0;
+                        border-radius: 2rem;
+
+                        animation:  stretch 5s linear;
+                        @keyframes stretch{
+                            0%{
+                                width: 10%;
+                            }
+                            50%{
+                                width: 50%;
+                            }
+                            100%{
+                                width: 60%;
+                            }
+                        }
+                     }
+                     #skill-3{
+                        width: 40%;
+                        height: 100%;
+                        border-radius: 2rem;
+                        background: #f9bf3f;
+
+                        animation:  stretch 5s linear;
+                        @keyframes stretch{
+                            0%{
+                                width: 10%;
+                            }
+                            50%{
+                                width: 20%;
+                            }
+                            100%{
+                                width: 40%;
+                            }
+                        }
+                     }
+                     #skill-4{
+                        width: 80%;
+                        height: 100%;
+                        border-radius: 2rem;
+                        background: #a84cb8;
+
+                        animation:  stretch 5s linear;
+                        @keyframes stretch{
+                            0%{
+                                width: 10%;
+                            }
+                            50%{
+                                width: 20%;
+                            }
+                            100%{
+                                width: 80%;
+                            }
+                        }
+                     }
+                     #skill-5{
+                        width: 80%;
+                        height: 100%;
+                        border-radius: 2rem;
+                        background-color: #ec5453;
+
+                        animation:  stretch 5s linear;
+                        @keyframes stretch{
+                            0%{
+                                width: 10%;
+                            }
+                            50%{
+                                width: 30%;
+                            }
+                            100%{
+                                width: 80%;
+                            }
+                        }
+                     }
+                     #skill-6{
+                        width: 80%;
+                        height: 100%;
+                        border-radius: 2rem;
+                       background: palevioletred;
+
+                       animation:  stretch 5s linear;
+                        @keyframes stretch{
+                            0%{
+                                width: 10%;
+                            }
+                            50%{
+                                width: 20%;
+                            }
+                            100%{
+                                width: 100%;
+                            }
+                        }
+                     }
+                     
+                }
+
+            }
+        }
+
+        .education{
+            
+            padding: 2rem 0;
+            margin: 10rem 0;
+
+            .education-row{
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+                gap: 2.5rem;
+                align-items: center;
+                margin-top: 3rem;
+
+                .edu-box{
+                    background: $secondary-bg;
+                    border: 1px solid $gray;
+                    font-size: 1.5rem;
+                    color: rgba(0,0,0,0.8);
+
+                    &.active{
+                        .edu-heading{
+                            background: $fg-color;
+                            color: white;
+                            border: none;
+
+                            i{
+                                transform: rotate(45deg);
+                            }
+                        }
+                        .edu-content{
+                            display: block;
+                        }
+                    }
+
+                    .edu-heading{
+                        display: flex;
+                        justify-content: space-between;
+                        border: 1px solid $gray;
+                        padding: 1.5rem 2rem;
+                        cursor: pointer;
+                    }
+                    .edu-content{
+                        padding: 1rem 0;
+                        padding: 1.5rem 2rem;
+                        border: 1px solid $gray;
+                        display: none;
+                    }
+                    
+                }
+            }
+        }
+
+        // experience section css open
+        .experience{
+
+            padding: 2rem 0;
+            margin: 15rem 0;
+
+            .heading{
+                margin-bottom: 5rem;
+            }
+
+            .exp-content{
+                
+               
+                display: flex;
+                gap: 5rem;
+                .exp-line{
+                    background: $secondary-bg;
+                    width: .8rem;
+                    height: 20rem;
+                    position: relative;
+                    .exp-circle{
+                        position: absolute;
+                        top: 0;
+                        left: -1.8rem;
+                        background: #2c98f0;
+                        width: 4rem;
+                        height: 4rem;
+                        padding: 1rem;
+                        outline: .5rem solid $secondary-bg;
+                        border-radius: 50%;
+                        text-align: center;
+
+                        i{
+                            font-size: 2rem;
+                            color: white;
+                        }
+                    }
+                    .end-circle{
+                        position: absolute;
+                        background: white;
+                        top: 100%;
+                        width: 2rem;
+                        height: 2rem;
+                        left: -1rem;
+                    }
+
+                }
+                .exp-desc{
+                    background: $secondary-bg;
+                    padding: 3rem 2rem;
+                    position: relative;
+                    margin-bottom: 1rem;
+
+                    .exp-angle{
+                        background: $secondary-bg;
+                        width: 2rem;
+                        height: 2rem;
+                        transform: rotate(45deg);
+                        position: absolute;
+                        top: 2rem;
+                        left: -1rem;
+                    }
+
+                    h1{
+                        font-size: 2rem;
+                        font-weight: 444;
+                        margin: 1rem 0;
+
+                        span{
+                            color: $gray;
+                        }
+                    }
+                    p{
+                        line-height: 3rem;
+                        font-size: 1.5rem;
+                        color: $gray;
+                        margin: 2rem;
+                    }
+                }
+
+            }
+        }
+
+        // work section code open
+
+        .work{
+            padding: 2rem 0;
+            margin: 0;
+            
+            .heading{
+                margin-bottom: 6rem;
+            }
+
+            .work-row{
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+                gap: 2.5rem;
+                align-items: center;   
+                
+                .work-box{
+
+                    .work-img{
+                        position: relative;
+
+                        img{
+                            width: 100%;
+                            height: 100%;
+                            
+                        }
+                        .work-layer{
+
+                            width: 100%;
+                            height: 100%;
+                            
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            background: linear-gradient(to bottom, $fg-color,rgba(255,255,255,0.5),$fg-color);
+                            color: $secondary-bg;
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+                            padding: 2rem;
+                            h1{
+                                font-size: 2rem;
+                            }
+    
+                            .social-links{
+                                i{
+                                    font-size: 2.5rem;
+                                    margin-right: 2rem;
+                                }
+                                
+                            }
+                            
+                            display: none;
+                        }
+                        
+                        &:hover{
+                            .work-layer{
+                                display: flex;
+                            }
+                        }
+                    }
+                                                                                                                                                                                                                  ;
+                    
+
+                    
+                }
+
+            }
+        }
+
+
+        .blog{
+            margin: 15rem 0;
+            .hide{
+                display: none;
+            }
+
+            .blog-row{
+                margin: 4rem 0;
+                display: grid;
+                grid-template-columns: repeat(3,1fr);
+                gap: 2.5rem;
+                align-items: center; 
+
+                .blog-box{
+                    z-index: 1000;
+                    img{
+                        width: 100%;
+                        height: 100%;
+
+                        &:hover{
+                            transform: scale(1.1);
+                        }
+                    }
+
+                    .blog-content{
+                        h4{
+                            margin: 2rem 0;
+                            font-weight: 100;
+                        }
+                        h1{
+                            font-size: 1.5rem;
+                            font-weight: 555;
+                        }
+                        p{
+                            margin: 2rem 0;
+                            line-height: 3rem;
+                            font-size: 1.5rem;
+                            color: $gray;
+                        }
+                        
+                    }
+                    
+                }
+            }
+
+
+
+        }
+
+        .contact{
+            padding: 5rem 0;
+
+            .contact-row{
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+                gap: 4rem;
+                align-items: center; 
+                margin-top: 5rem;
+
+               .contact-left{
+                height: 100%;
+                .contact-box{
+                    display: flex;
+                    gap: 3rem;
+                    margin-bottom: 3rem;
+                    align-items: center;
+
+                    i{
+
+                        background: $secondary-bg;
+                        padding: 3rem;
+                        font-size: 2.5rem;
+                        color: $fg-color;
+                    }
+                    p{
+                        font-size: 1.5rem;
+                    }
+                }
+               }
+                .contact-right{
+                    #contact-form{
+                        width: 80%;
+                        display: flex;
+                        flex-direction: column;
+    
+                        input{
+                            background: $secondary-bg;
+                            padding: 2rem;
+                            margin-bottom: 2rem;
+
+                            &::focus{
+                                background: $fg-color;
+                                color: white;
+                            }
+                        }
+                        textarea{
+                            background: $secondary-bg;
+                            resize: none;
+                            padding: 2rem;
+                        }
+                        button{
+                            margin: 2rem 0;
+
+                        }
+                    }
+                }
+            }
+        }
+
+        
+
+        
+    }
+   
+}   
+
+
+
+
+
+// media queries
+@media screen and (max-width: 480px)
+{
+    html
+    {
+        font-size: 50%;
+        overflow-x: hidden;
+    }
+    .a{
+        display: none;
+    }
+} 
